@@ -3,7 +3,7 @@ public class NumberToText {
     public static void main(String[] args){
     
         //numberToText(56599910);
-    	numberToText2(623);
+    	//numberToText2(623);
         
     }
     
@@ -13,12 +13,12 @@ public class NumberToText {
         for(int x=no.length()-1; x>=0; x--){
         	System.out.println(no.substring(x,x+1));
         	
-        	//int unit
+        	//int unit 
         }
         
         
     
-    }
+    }s
     
     
     

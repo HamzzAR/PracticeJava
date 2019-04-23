@@ -3,7 +3,7 @@ public class MyString {
 	public static void main(String[] args) {
 
 		// find("Tomtom is Tomtom but okT", "Tom");
-		findAndReplace("Tomptom is TTT Toms and not TomK", "Tom", "*");
+		findAndReplace("shafeeq is here shafeeqsha", "shafeeq", "*");
 
 	}
 
@@ -21,6 +21,8 @@ public class MyString {
 					} else {
 						newmsg = newmsg + msg.substring(i, i + 1);
 					}
+				}else{
+					newmsg = newmsg + msg.substring(i, i + 1);
 				}
 			} else {
 				newmsg = newmsg + msg.substring(i, i + 1);
