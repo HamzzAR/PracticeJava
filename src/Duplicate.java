@@ -26,16 +26,16 @@ public class Duplicate {
 				String word2 = "";
 				String letter2 = "";
 				for(int i=x; i<sstring.length(); i++){
-					letter2 = msg.substring(i, i+1);
+					letter2 = sstring.substring(i, i+1);
 					if (sstring.substring(i,i+1).equals(word.substring(0,1))) {
 						if ((sstring.length() - i) >= word.length()
 								&& sstring.substring(i-1,i).equals(" ")
 								&& sstring.substring(i,i+word.length()+1).equals(" ")) {
 							word2+=letter2;
 						} else{
+							if()
 							newMsg+=word;
 						}
-					
 					}else{
 						word2+=letter2;
 						newMsg+=word2;
