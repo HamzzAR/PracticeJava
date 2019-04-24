@@ -3,11 +3,50 @@ public class Duplicate {
 
 
 	public static void main(String[] args) {
-		message("hell hell is this is too");
+		//message("hell hell is this too");
 		
 		//System.out.println(findAndReplace("Hello this is Hello and Hello","He",""));
 
 	}
+	
+	
+	public static void duplicate(String msg){
+		String letter = "";
+		for(int x=0; x<msg.length(); x++){
+			letter = msg.substring(x, x+1);
+			
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public static void message(String msg) {
 		String letter = "";

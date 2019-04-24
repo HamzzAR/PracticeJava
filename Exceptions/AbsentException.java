@@ -1,0 +1,2 @@
+
+class AbsentException extends Exception{}
