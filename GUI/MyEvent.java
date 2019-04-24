@@ -4,16 +4,20 @@ import java.awt.event.ActionListener;
 
 
 public class MyEvent implements ActionListener{
-	TextField t;
+	TextField v1,v2;
+	TextField txt,txt1,txt2;
 	
-	public MyEvent(TextField t) {
-		this.t = t;
+	public MyEvent(TextField t, TextField t1, TextField t2) {
+		v1 = t1;
+		v2 = t2;
+		txt = t;
 	}
-	
+		
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		
-		t.setText("Hello My Friends");
-		
+		double r = Integer.parseInt(v1.getText()) + Integer.parseInt(v2.getText());
+		String res = String.valueOf(r);
+		txt.setText(res);
+		System.out.println(res);
 	}
 }

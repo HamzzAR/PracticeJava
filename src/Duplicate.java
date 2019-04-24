@@ -33,7 +33,7 @@ public class Duplicate {
 								&& sstring.substring(i,i+word.length()+1).equals(" ")) {
 							word2+=letter2;
 						} else{
-							if()
+							
 							newMsg+=word;
 						}
 					}else{
