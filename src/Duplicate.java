@@ -6,17 +6,51 @@ public class Duplicate {
 		//message("hell hell is this too");
 		
 		//System.out.println(findAndReplace("Hello this is Hello and Hello","He",""));
-
+		
+		duplicate("hi i am hi hamza");
 	}
 	
 	
 	public static void duplicate(String msg){
 		String letter = "";
+		String word = "";
+		String newMsg = "";
 		for(int x=0; x<msg.length(); x++){
 			letter = msg.substring(x, x+1);
-			
-			
+			if(letter.equals(" ") || x+1 == msg.length()){
+				if(x+1 == msg.length()){ //to print the last letter
+					word+=letter;		 //of the sentence
+				}
+				//System.out.println(word);
+				String sstring = msg.substring(x,msg.length()-1);
+				String word2 = "";
+				String letter2 = "";
+				for(int i=x; i<sstring.length(); i++){
+					letter2 = msg.substring(i, i+1);
+					if (sstring.substring(i,i+1).equals(word.substring(0,1))) {
+						if ((sstring.length() - i) >= word.length()
+								&& sstring.substring(i-1,i).equals(" ")
+								&& sstring.substring(i,i+word.length()+1).equals(" ")) {
+							word2+=letter2;
+						} else{
+							newMsg+=word;
+						}
+					
+					}else{
+						word2+=letter2;
+						newMsg+=word2;
+					}
+				}
+				word2 = "";
+
+				word="";
+			}else{
+				word+=letter;
+			}
+
 		}
+		
+		System.out.println(newMsg);
 	}
 	
 	
