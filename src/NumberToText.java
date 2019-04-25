@@ -3,34 +3,33 @@ public class NumberToText {
     public static void main(String[] args){
     
         //numberToText(56599910);
-    	//numberToText2(623);
+    	numberToText2(623);
         
     }
     
     public static void numberToText2(int num){
         String no = Integer.toString(num);
-        
+        int n = 1;
         for(int x=no.length()-1; x>=0; x--){
         	System.out.println(no.substring(x,x+1));
         	
-        	//int unit 
+        	switch (n) {
+			case 1:
+				
+				break;
+
+			default:
+				break;
+			}
+        		
+        	n++;
         }
         
         
     
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
+
     
     
     

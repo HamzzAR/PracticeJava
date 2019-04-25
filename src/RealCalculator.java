@@ -84,11 +84,7 @@ public class RealCalculator implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Button btn = (Button) e.getSource();
-		
-		
-		
-		
-		
+
 		if(btn == bplus){
 			operation = "+";
 			if(!num.equals("")) {
