@@ -83,16 +83,17 @@ public class RealCalculator implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Button btn = (Button) e.getSource();
-		
-		Button[] button = {b0,b1,b2,b3,b4,b5,b6,b7,b8,b9};
-		int c = 0;
-		for(Button x: button){
-			if(btn == x){
-				num+=c;
-				screen.setText(num);
-			}
-			c++;
+		/*
+		//Button[] button = {b0,b1,b2,b3,b4,b5,b6,b7,b8,b9};
+		//int c = 0;
+		//for(Button x: button){
+			//if(btn == x){
+				//num+=c;
+				screen.setText(  );
+			//}
+			//c++;
 		}
+		*/
 		
 		if(btn == bplus){
 			operation = "+";
@@ -100,25 +101,25 @@ public class RealCalculator implements ActionListener {
 			num = "";
 			screen.setText("");
 		}
-		if(btn == bminus){
+		else if(btn == bminus){
 			operation = "-";
 			v1 = num;
 			num = "";
 			screen.setText("");
 		}
-		if(btn == btimes){
+		else if(btn == btimes){
 			operation = "*";
 			v1 = num;
 			num = "";
 			screen.setText("");
 		}
-		if(btn == bdivide){
+		else if(btn == bdivide){
 			operation = "/";
 			v1 = num;
 			num = "";
 			screen.setText("");
 		}
-		if(btn == bcancel){
+		else if(btn == bcancel){
 			num = "";
 			v1 = "";
 			v2 = "";
@@ -126,7 +127,7 @@ public class RealCalculator implements ActionListener {
 			screen.setText(num);
 		}
 		
-		if(btn == bequal){
+		else if(btn == bequal){
 			if(!operation.equals("")){
 				String res = "";
 				v2 = num;
@@ -151,7 +152,9 @@ public class RealCalculator implements ActionListener {
 				num = "";
 				operation = "";
 			}
-			
+			else{
+				screen.setText(screen.getText()+btn.getLabel());
+			}
 			
 		}
 		
