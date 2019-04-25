@@ -15,6 +15,7 @@ public class RealCalculator implements ActionListener {
 	Button b0,b1,b2,b3,b4,b5,b6,b7,b8,b9;
 	TextField  screen;
 	String num = "";
+	String num2 = "";
 	String operation = "";
 	String v1,v2 = "0";
 	
@@ -39,7 +40,7 @@ public class RealCalculator implements ActionListener {
 		b2 = new Button("2"); b6 = new Button("6"); b8 = new Button("8");
 		b3 = new Button("3"); 
 
-		screen = new TextField(20);
+		screen = new TextField(30);
 		screen.setBackground(Color.GREEN);;
 
 		bplus.addActionListener(this);
@@ -83,39 +84,45 @@ public class RealCalculator implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Button btn = (Button) e.getSource();
-		/*
-		//Button[] button = {b0,b1,b2,b3,b4,b5,b6,b7,b8,b9};
-		//int c = 0;
-		//for(Button x: button){
-			//if(btn == x){
-				//num+=c;
-				screen.setText(  );
-			//}
-			//c++;
-		}
-		*/
 		
 		if(btn == bplus){
 			operation = "+";
-			v1 = num;
+			if(!num.equals("")) {
+				v1 = num;
+			}else {
+				v1 = v2;
+			}
+			
 			num = "";
 			screen.setText("");
 		}
 		else if(btn == bminus){
 			operation = "-";
-			v1 = num;
+			if(!num.equals("")) {
+				v1 = num;
+			}else {
+				v1 = v2;
+			}
 			num = "";
 			screen.setText("");
 		}
 		else if(btn == btimes){
 			operation = "*";
-			v1 = num;
+			if(!num.equals("")) {
+				v1 = num;
+			}else {
+				v1 = v2;
+			}
 			num = "";
 			screen.setText("");
 		}
 		else if(btn == bdivide){
 			operation = "/";
-			v1 = num;
+			if(!num.equals("")) {
+				v1 = num;
+			}else {
+				v1 = v2;
+			}
 			num = "";
 			screen.setText("");
 		}
@@ -130,29 +137,41 @@ public class RealCalculator implements ActionListener {
 		else if(btn == bequal){
 			if(!operation.equals("")){
 				String res = "";
-				v2 = num;
+				if(!num.equals("")) {
+					v2 = num;
+				}
+				
 				switch (operation) {
 				case "+":
-					res = Integer.toString((Integer.parseInt(v1) + Integer.parseInt(v2))) ;
+					res = Double.toString((Double.parseDouble(v1)  + Double.parseDouble(v2)));
 					break;
 				case "-":
-					res = Integer.toString((Integer.parseInt(v1)  - Integer.parseInt(v2))) ;
+					res = Double.toString((Double.parseDouble(v1)  - Double.parseDouble(v2)));
 					break;
 				case "*":
-					res = Integer.toString((Integer.parseInt(v1)  * Integer.parseInt(v2))) ;
+					res = Double.toString((Double.parseDouble(v1)  * Double.parseDouble(v2)));
 					break;
 				case "/":
-					res = Double.toString((Double.parseDouble(v1)  / Double.parseDouble(v2))) ;
+					res = Double.toString((Double.parseDouble(v1)  / Double.parseDouble(v2)));
 					break;
 				}
 				
 				screen.setText(res);
+				v2 = screen.getText();
 				v1 = "";
-				v2 = "";
 				num = "";
 				operation = "";
 			}
-			else{
+			
+			
+		}
+		else{
+			if(!operation.equals("")) {
+				num+=btn.getLabel();
+				screen.setText(screen.getText()+btn.getLabel());
+			}else {
+				screen.setText("");
+				num+=btn.getLabel();
 				screen.setText(screen.getText()+btn.getLabel());
 			}
 			
