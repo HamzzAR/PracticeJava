@@ -88,6 +88,7 @@ public class RealCalculator implements ActionListener {
 		
 		
 		
+		
 		if(btn == bplus){
 			operation = "+";
 			if(!num.equals("")) {
