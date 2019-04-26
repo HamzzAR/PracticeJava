@@ -3,11 +3,11 @@ public class Duplicate {
 
 
 	public static void main(String[] args) {
-		//message("hell hell is this too");
+		message("hell hell is this too");
 		
 		//System.out.println(findAndReplace("Hello this is Hello and Hello","He",""));
 		
-		duplicate("hi i am hi hamza");
+		//duplicate("hi i am hi hamza");
 	}
 	
 	
@@ -97,7 +97,7 @@ public class Duplicate {
 				System.out.println("Word: "+word);
 				System.out.println("Msg before sent: "+msg.substring(x+1, msg.length()));
 				msg = findAndReplace(msg.substring(x+1, msg.length()),word,"");
-				msg = word + " " + msg.substring(1,msg.length());
+				msg = word + " " + msg;
 				System.out.println("Msg after: "+msg);
 				word2 = word2 + word;
 				word = "";
@@ -117,10 +117,8 @@ public class Duplicate {
 	
 	
 	public static String findAndReplace(String msg, String lookfor, String replace) {
-		int i;
-		i = 0;
 		String newmsg = "";
-		for (; i < msg.length(); i++) {
+		for (int i=0; i < msg.length(); i++) {
 			if (msg.substring(i, i + 1).equals(lookfor.substring(0, 1))) {
 				if ((msg.length() - i) >= lookfor.length()) {
 					if (msg.substring(i, i + lookfor.length()).equals(lookfor)) {

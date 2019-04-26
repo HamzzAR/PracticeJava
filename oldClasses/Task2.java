@@ -5,7 +5,7 @@ public class Task2{
 			Task2 x = new Task2();
 			// x.decimalToBinary(65);
 			// x.binaryToDecimal("010010");
-			x.getPower(2,0);
+			x.getPower(2,4);
 		
 
 		}
@@ -35,7 +35,6 @@ public class Task2{
 
 	public void getPower(int n, int power){
 		int i = n;
-		//if power=0
 		for (int x=0; x< power -1; x++) {
 			i = n * i;
 		}

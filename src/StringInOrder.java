@@ -4,7 +4,7 @@ public class StringInOrder {
 
 	public static void main(String[] args) {
 		
-		StringAssenOrder("a aa");
+		StringAssenOrder("a aaa aaaaa aa ");
 
 	}
 	
@@ -28,11 +28,12 @@ public class StringInOrder {
 					for(int i=0; i<newMsg.length(); i++) {
 						letter2 = newMsg.substring(i, i+1);
 						if(letter2.equals(" ") || i==newMsg.length()-1) {
-							if(word.length() > word2.length()) {
+							System.out.println("first second if");
+							if(word.length() >= word2.length()) {
 								System.out.println("did if");
 								  continue;
 							} else {
-								System.out.println("did else");
+								System.out.println("did else-----");
 								newMsg = newMsg.substring(0,i-word2.length()) + newMsg.substring(i-word2.length(),i) + newMsg.substring(i,newMsg.length());
 								break;
 							}
