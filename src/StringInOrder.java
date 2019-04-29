@@ -34,7 +34,7 @@ public class StringInOrder {
 								  continue;
 							} else {
 								System.out.println("did else-----");
-								newMsg = newMsg.substring(0,i-word2.length()) + newMsg.substring(i-word2.length(),i) + newMsg.substring(i,newMsg.length());
+								newMsg = newMsg+  newMsg.substring(0,i-word2.length()) + newMsg.substring(i-word2.length(),i) + newMsg.substring(i,newMsg.length());
 								break;
 							}
 						}
